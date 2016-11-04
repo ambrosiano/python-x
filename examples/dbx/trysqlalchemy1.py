@@ -5,3 +5,8 @@ connection = engine.connect()
 
 cars = Table("Cars",MetaData(),autoload=True,autoload_with=engine)
 
+
+print(cars)
+
+
+
