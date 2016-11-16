@@ -1,6 +1,7 @@
 from PyQt4.QtCore import *
 import operator
 from PyQt4.QtGui import *
+
 class TableModel(QAbstractTableModel):
     def __init__(self, datain, headerdata, parent=None, *args):
         """ datain: a list of lists
@@ -23,10 +24,24 @@ class TableModel(QAbstractTableModel):
             return QVariant()
         return QVariant(self.arraydata[index.row()][index.column()])
 
+    def setData(self, index, value, role=Qt.EditRole):
+        #If the row does not exist add it
+        row = index.row()
+        col = index.column()
+        n = len(self.arraydata)
+        if row > n-1:
+            self.arraydata.append(["",""])
+            irow = n
+        #When there is a row, we can set the data item.
+        self.arraydata[row,col] = value
+        self.emit(SIGNAL("dataChanged()"))
+        return True
+
     def headerData(self, col, orientation, role):
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             return QVariant(self.headerdata[col])
         return QVariant()
+
 
     def sort(self, Ncol, order):
         """Sort table by given column number.
@@ -36,3 +51,4 @@ class TableModel(QAbstractTableModel):
         if order == Qt.DescendingOrder:
             self.arraydata.reverse()
         self.emit(SIGNAL("layoutChanged()"))
+
