@@ -11,5 +11,5 @@ g.add_edge("B","C")
 g.add_edge("C","A")
 
 g.layout(prog="dot")
-g.draw("test.png")
+g.draw("test.svg")
 

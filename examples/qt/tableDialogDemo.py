@@ -14,6 +14,7 @@ class TableDialog(QDialog):
         headers = ["Title","Author"]
         self.tablemodel = TableModel(tabledata,headers)
         self.ui.tableView.setModel(self.tablemodel)
+        self.ui.tableView.horizontalHeader().setResizeMode(QtGui.QHeaderView.Stretch)
 
         self.ui.buttonBox.rejected.connect(self.cancelAction)
         self.ui.buttonBox.accepted.connect(self.okAction)
