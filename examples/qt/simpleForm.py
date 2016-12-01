@@ -22,43 +22,43 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_Tab1Form(object):
-    def setupUi(self, Tab1Form):
-        Tab1Form.setObjectName(_fromUtf8("Tab1Form"))
-        Tab1Form.resize(698, 415)
-        self.gridLayout = QtGui.QGridLayout(Tab1Form)
+class Ui_SimpleForm(object):
+    def setupUi(self, SimpleForm):
+        SimpleForm.setObjectName(_fromUtf8("SimpleForm"))
+        SimpleForm.resize(697, 415)
+        self.gridLayout = QtGui.QGridLayout(SimpleForm)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.formLayout = QtGui.QFormLayout()
         self.formLayout.setObjectName(_fromUtf8("formLayout"))
-        self.label = QtGui.QLabel(Tab1Form)
+        self.label = QtGui.QLabel(SimpleForm)
         self.label.setObjectName(_fromUtf8("label"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.label)
-        self.lineEdit = QtGui.QLineEdit(Tab1Form)
+        self.lineEdit = QtGui.QLineEdit(SimpleForm)
         self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.lineEdit)
-        self.label_2 = QtGui.QLabel(Tab1Form)
+        self.label_2 = QtGui.QLabel(SimpleForm)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.label_2)
-        self.comboBox = QtGui.QComboBox(Tab1Form)
+        self.comboBox = QtGui.QComboBox(SimpleForm)
         self.comboBox.setObjectName(_fromUtf8("comboBox"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.comboBox)
         self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 1)
 
-        self.retranslateUi(Tab1Form)
-        QtCore.QMetaObject.connectSlotsByName(Tab1Form)
+        self.retranslateUi(SimpleForm)
+        QtCore.QMetaObject.connectSlotsByName(SimpleForm)
 
-    def retranslateUi(self, Tab1Form):
-        Tab1Form.setWindowTitle(_translate("Tab1Form", "Form", None))
-        self.label.setText(_translate("Tab1Form", "Name", None))
-        self.label_2.setText(_translate("Tab1Form", "Color Preference", None))
+    def retranslateUi(self, SimpleForm):
+        SimpleForm.setWindowTitle(_translate("SimpleForm", "Colors", None))
+        self.label.setText(_translate("SimpleForm", "Name", None))
+        self.label_2.setText(_translate("SimpleForm", "Color Preference", None))
 
 
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
-    Tab1Form = QtGui.QWidget()
-    ui = Ui_Tab1Form()
-    ui.setupUi(Tab1Form)
-    Tab1Form.show()
+    SimpleForm = QtGui.QWidget()
+    ui = Ui_SimpleForm()
+    ui.setupUi(SimpleForm)
+    SimpleForm.show()
     sys.exit(app.exec_())
 
