@@ -16,16 +16,11 @@ class SimpleApp(QMainWindow):
         tabWidget = QTabWidget()
         layout.addWidget(tabWidget)
 
-
         formWidget = QWidget()
         formWidget.ui = Ui_SimpleForm()
         formWidget.ui.setupUi(formWidget)
 
         tabWidget.addTab(formWidget,"Color Preference")
-
-        # self.ui.tabWidget.removeTab(1)
-        # self.ui.tabWidget.removeTab(0)
-        # self.ui.tabWidget.addTab(formWidget,"Color Preference")
 
 if __name__ == "__main__":
     import sys
