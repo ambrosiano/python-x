@@ -1,6 +1,6 @@
-import pygraphviz as pgv
+from pygraphviz import *
 
-g = pgv.AGraph()
+g = AGraph()
 
 g.add_node("A")
 g.add_node("B")
