@@ -2,6 +2,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from image_dialog import Ui_ImageDialog
 
+
 class ImageController(QDialog):
     def __init__(self):
         QDialog.__init__(self)
