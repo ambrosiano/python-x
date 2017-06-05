@@ -1,3 +1,4 @@
 # Ignore PyCharm project directory and contents.
 .idea
+venv/
 
